@@ -112,6 +112,10 @@
     }
     
     imageSize = [image size];
+    if (_limitImageHeight > 0) {
+        CGFloat width = _limitImageHeight * (imageSize.width / imageSize.height);
+        imageSize = CGSizeMake(width, _limitImageHeight);
+    }
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);

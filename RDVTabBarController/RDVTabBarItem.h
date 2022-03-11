@@ -128,4 +128,9 @@
  */
 @property (nonatomic) UIFont *badgeTextFont;
 
+/*
+ *  大于0：图片自适应该高度； 其他；保持原来SDK逻辑
+ */
+@property (nonatomic, assign) CGFloat limitImageHeight;
+
 @end
